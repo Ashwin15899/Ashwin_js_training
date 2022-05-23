@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+
+    //Data Types in JavaScript
+    var a=25.5;
+    document.write(typeof a);
+    document.write("<br>")
+    var fname="Tutor Joes";
+    document.write(typeof fname);
+    document.write("<br>")
+    var isMarried=true;
+    document.write(typeof isMarried);
+    document.write("<br>")
+    var phone=null;
+    document.write(typeof phone);
+    document.write("<br>")
+    var courses=['C','C++','Java'];
+    document.write(typeof courses)
+    document.write("<br>")
+    var student={
+        'name':'Joes',
+        'age':22
+    }
+    document.write(typeof student)
+    document.write("<br>")
+    var d=new Date();
+    document.write(d);
+    document.write("<br>")
+    document.write(typeof d);
+    document.write("<br>")
+    document.write("<br>")
+
+    //Conditional statements
+    var result = 51;
+    if(result >= 80)
+    document.write("Very good")
+    else if(result >= 60 && result <=79)
+    document.write("Good")
+    else if(result >= 40 && result <=59)
+    document.write("Could've been done better")
+    else
+    document.write("Fail")
+    document.write("<br>")
+    document.write("<br>")
+
+    //Looping statements
+    let i,j;
+	for(i=1;i<=5;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+            document.write("*")
+	    }
+        document.write("<br>")
+	}
+
+    //Objects, Array, JSON Handling
+    var str = '{ "1": "Ram", "gender": "male", "age":25, "is married":false,"marks": [{"English":95,"Description":"Very good"},{"Maths":35,"Description":"Very bad"}],"average": 74,"hobbies": null,"address":{"street":"cherry road","city":"salem","pincode":636007}}';
+    
+    var o = JSON.parse(str);
+    document.write("<br> Name        : "+ o["1"]);
+    document.write("<br> Married     : "+ o["is married"]);
+    document.write("<br> Address     : "+ o["address"]["street"]);
+    var sub = "English";
+    document.write("<br> English     : "+ o.marks[0][sub]);
+    document.write("<br> Description : "+ o.marks[0]["Description"]);
+</script>
+</body>
+</html>
